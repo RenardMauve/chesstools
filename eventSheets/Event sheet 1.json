@@ -1,0 +1,189 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "board_x",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 900123042583996
+		},
+		{
+			"eventType": "variable",
+			"name": "board_y",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 781947191036807
+		},
+		{
+			"eventType": "script",
+			"script": ""
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 758891282155904
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 293549037853086,
+					"parameters": {
+						"variable": "board_x",
+						"value": "Board.X"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 886631908274294,
+					"parameters": {
+						"variable": "board_y",
+						"value": "Board.Y"
+					}
+				},
+				{
+					"callFunction": "createPiece",
+					"sid": 519216963788655,
+					"parameters": [
+						"4",
+						"4",
+						"5"
+					]
+				}
+			],
+			"sid": 930552048593538
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Sprite",
+					"sid": 304676586482229
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-animation",
+					"objectClass": "Sprite",
+					"sid": 767183029891959
+				}
+			],
+			"sid": 206142240470789
+		},
+		{
+			"functionName": "createPiece",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "x_pos",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 256607471345982
+				},
+				{
+					"name": "y_pos",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 614294895520808
+				},
+				{
+					"name": "piece_frame",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 188733398474943
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 780758065216540,
+					"parameters": {
+						"object-to-create": "Sprite",
+						"layer": "0",
+						"x": "board_x+x_pos*120",
+						"y": "board_y+y_pos*120",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Sprite",
+					"sid": 237097786695017,
+					"parameters": {
+						"frame-number": "piece_frame"
+					}
+				}
+			],
+			"sid": 455628172157911
+		},
+		{
+			"functionName": "pieceStateToChar",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "x_pos",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 752172164790395
+				},
+				{
+					"name": "y_pos",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 585181554508291
+				},
+				{
+					"name": "piece_frame",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 176130144413802
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "alert",
+					"objectClass": "Browser",
+					"sid": 924644058610693,
+					"parameters": {
+						"message": "piece_frame*64+y_pos*8+x_pos"
+					}
+				}
+			],
+			"sid": 222317823256106
+		}
+	],
+	"sid": 663802810872829
+}

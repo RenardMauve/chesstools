@@ -1,0 +1,434 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 35800,
+	"name": "chess tools",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Dictionary",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "49azqauwqur",
+	"objectTypes": {
+		"items": [
+			"Sprite",
+			"Browser",
+			"Dictionary",
+			"BotsArray",
+			"LocalStorage",
+			"Text",
+			"Sprite2",
+			"AJAX",
+			"CandidatesArray",
+			"Board"
+		],
+		"subfolders": []
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Layout 1",
+			"tournoi bot"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Event sheet 1",
+			"Event sheet 2"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [
+				{
+					"name": "botsManager.js",
+					"type": "application/javascript",
+					"sid": 783778984028631,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Array2D.js",
+					"type": "application/javascript",
+					"sid": 169572596294384,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Globals.js",
+					"type": "application/javascript",
+					"sid": 702640649238309,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "importsForEvents.js",
+					"type": "application/javascript",
+					"sid": 981596855794108,
+					"script-info": {
+						"purpose": "imports-for-events"
+					}
+				},
+				{
+					"name": "main.js",
+					"type": "application/javascript",
+					"sid": 262914576903827,
+					"script-info": {
+						"purpose": "main"
+					}
+				}
+			],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "Ace.js",
+							"type": "text/javascript",
+							"sid": 199885808842246,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Array1D.js",
+							"type": "text/javascript",
+							"sid": 673899503752270,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Checkbox.js",
+							"type": "text/javascript",
+							"sid": 587269706814534,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Container.js",
+							"type": "text/javascript",
+							"sid": 115549580407841,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "EventEmitter.js",
+							"type": "text/javascript",
+							"sid": 398150469705962,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ExtendedList.js",
+							"type": "text/javascript",
+							"sid": 900917314880455,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Grid2D.js",
+							"type": "text/javascript",
+							"sid": 589285461895406,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "HexaGrid.js",
+							"type": "text/javascript",
+							"sid": 849917585756352,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Prefab.js",
+							"type": "text/javascript",
+							"sid": 699955197021103,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ResourcesManager.js",
+							"type": "text/javascript",
+							"sid": 814630792221055,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SquareGrid.js",
+							"type": "text/javascript",
+							"sid": 315679168258677,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Tween.js",
+							"type": "text/javascript",
+							"sid": 671612878893524,
+							"script-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Tree.js",
+							"type": "application/javascript",
+							"sid": 610163427674347,
+							"script-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "ace"
+				}
+			]
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 614892221685811,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 784736655674747,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 317549081053079,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 598857541034752,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 951296215391624,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 290393337990638,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 744311316960012,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "New Dictionary.json",
+					"type": "application/json",
+					"sid": 659564220606445,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "nope.json",
+					"type": "application/json",
+					"sid": 280089358227277,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bots.json",
+					"type": "application/json",
+					"sid": 914851959358299,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": true,
+		"exportFileStructure": "flat",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
+	"firstLayout": null
+}

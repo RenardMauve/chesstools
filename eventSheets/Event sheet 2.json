@@ -1,0 +1,326 @@
+{
+	"name": "Event sheet 2",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "myRating",
+			"type": "number",
+			"initialValue": "1000",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 216567487316779
+		},
+		{
+			"eventType": "variable",
+			"name": "opponentRating",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 390107808443175
+		},
+		{
+			"functionName": "getExpected",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "playerARating",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 666017340883528
+				},
+				{
+					"name": "playerBRating",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 209600690205313
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-function-return-value",
+					"objectClass": "Functions",
+					"sid": 246192368251999,
+					"parameters": {
+						"value": "1/(1+10^((playerBRating-playerARating)/400))"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 669838630812484,
+					"parameters": {
+						"text": "\"elo : \" & myRating"
+					}
+				}
+			],
+			"sid": 488723061139214
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 733107953608413
+				}
+			],
+			"actions": [
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 301954133129266,
+					"parameters": {
+						"tag": "\"bots\"",
+						"file": "nope.json"
+					}
+				}
+			],
+			"sid": 416025345219336
+		},
+		{
+			"functionName": "updateRating",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "expected",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 590872479123448
+				},
+				{
+					"name": "actual",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 201142863643966
+				},
+				{
+					"name": "current",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 893786367680481
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-function-return-value",
+					"objectClass": "Functions",
+					"sid": 465909149579420,
+					"parameters": {
+						"value": "round(current+15*(actual-expected))"
+					}
+				}
+			],
+			"sid": 949164126062470
+		},
+		{
+			"functionName": "getCandidates",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "nbCandidates",
+					"type": "number",
+					"initialValue": "7",
+					"comment": "",
+					"sid": 812327700096624
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "clear",
+					"objectClass": "CandidatesArray",
+					"sid": 226900228019983,
+					"parameters": {
+						"value": "0"
+					}
+				}
+			],
+			"sid": 945805934587616,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "nbCandidatesAvailable",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 212573327691484
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each-element",
+							"objectClass": "BotsArray",
+							"sid": 165672965185132,
+							"parameters": {
+								"axes": "x"
+							}
+						},
+						{
+							"id": "is-between-values",
+							"objectClass": "System",
+							"sid": 668729254680435,
+							"parameters": {
+								"value": "BotsArray.At(BotsArray.CurX,1)",
+								"lower-bound": "myRating-200",
+								"upper-bound": "myRating+200"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-at-xy",
+							"objectClass": "CandidatesArray",
+							"sid": 452320417175075,
+							"parameters": {
+								"x": "nbCandidatesAvailable",
+								"y": "0",
+								"value": "BotsArray.At(BotsArray.CurX,0)"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "CandidatesArray",
+							"sid": 663978970101389,
+							"parameters": {
+								"x": "nbCandidatesAvailable",
+								"y": "1",
+								"value": "BotsArray.At(BotsArray.CurX,1)"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "CandidatesArray",
+							"sid": 734739299687300,
+							"parameters": {
+								"x": "nbCandidatesAvailable",
+								"y": "2",
+								"value": "BotsArray.At(BotsArray.CurX,2)"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 791250669356117,
+							"parameters": {
+								"variable": "nbCandidatesAvailable",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 529772955806162
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "while",
+							"objectClass": "System",
+							"sid": 152590999519256
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 932291253689135,
+							"parameters": {
+								"first-value": "nbCandidates",
+								"comparison": 2,
+								"second-value": "nbCandidatesAvailable"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "log",
+							"objectClass": "Browser",
+							"sid": 534754282044469,
+							"disabled": true,
+							"parameters": {
+								"type": "log",
+								"message": "CandidatesArray.AsJSON"
+							}
+						},
+						{
+							"id": "delete",
+							"objectClass": "CandidatesArray",
+							"sid": 894649651103614,
+							"parameters": {
+								"index": "floor(random(nbCandidatesAvailable))",
+								"axis": "x"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 415924682986967,
+							"parameters": {
+								"variable": "nbCandidatesAvailable",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 754060888916315
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 613949201970814,
+					"parameters": {
+						"tag": "\"bots\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "load",
+					"objectClass": "BotsArray",
+					"sid": 228953362748258,
+					"parameters": {
+						"json": "AJAX.LastData"
+					}
+				},
+				{
+					"callFunction": "getCandidates",
+					"sid": 907380476842601,
+					"parameters": [
+						"7"
+					]
+				}
+			],
+			"sid": 242552568969246
+		}
+	],
+	"sid": 441043542021535
+}
